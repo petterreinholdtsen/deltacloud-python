@@ -12,7 +12,7 @@ class SimpleRestClient:
       self.client.add_credentials(self.user, self.password)
 
     def GET(self, uri):
-      if uri.startswith('http://'):
+      if uri.startswith('http://') or uri.startswith('https://'):
 	current_url = ''
       else:
 	current_url = self.url
